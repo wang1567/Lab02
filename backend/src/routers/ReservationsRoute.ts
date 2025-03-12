@@ -17,7 +17,7 @@ export class ReservationsRoute extends Route{
             this.Controller.test(req, res);
         })
 
-        this.router.get(`${this.url}`, (req, res) => {
+        this.router.get(`${this.url}get`, (req, res) => {
             this.Controller.getStudentReservations(req, res);
         });
     }

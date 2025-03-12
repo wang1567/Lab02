@@ -1,11 +1,11 @@
-import { Controller } from "../abstract/Controller";
 import { Route } from "../abstract/Route"
 import { PageController } from '../controller/pageController'
+import { Controller } from '../abstract/Controller'
 
 export class PageRoute extends Route{
     
     protected url: string;
-    protected Contorller = new PageController();
+    protected Controller = new PageController();
 
     constructor(){
         super()
@@ -15,7 +15,7 @@ export class PageRoute extends Route{
 
     protected setRoutes(): void {
         this.router.get(`${this.url}`,(req, res)=>{
-            this.Contorller.sendPage(req, res);
+            this.Controller.sendPage(req, res);
         })
     }
 

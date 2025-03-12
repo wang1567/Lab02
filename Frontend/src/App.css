@@ -1,0 +1,112 @@
+/* 容器：使用 Flex 布局增加靈活性 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex; /* 使用 Flex 布局 */
+  flex-direction: column; /* 垂直排列子元素 */
+  align-items: center; /* 水平居中 */
+  min-height: 100vh; /* 確保容器至少占滿螢幕高度 */
+}
+
+/* 標題：置頂並增加間距 */
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem; /* 進一步加大間距 */
+  color: #2d3748;
+}
+
+/* 訊息樣式：適應容器寬度 */
+.loading-message, .error-message, .no-data-message {
+  width: 100%; /* 占滿容器寬度 */
+  max-width: 600px; /* 限制最大寬度 */
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  margin: 0 auto; /* 居中 */
+}
+
+.error-message {
+  color: #e53e3e;
+  background-color: #fff5f5;
+}
+
+/* 表格容器：增加靈活性和邊距 */
+.table-container {
+  width: 100%; /* 占滿可用空間 */
+  max-width: 1000px; /* 限制最大寬度 */
+  overflow-x: auto;
+  padding: 0.5rem;
+  margin: 0 auto; /* 居中 */
+}
+
+/* 表格：優化版面並增加陰影 */
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #e6fffa;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* 輕微陰影 */
+}
+
+/* 表格頭和單元格：調整間距和邊框 */
+.reservation-table th,
+.reservation-table td {
+  border: 1px solid #bee3f8;
+  padding: 0.75rem 1.25rem;
+  text-align: left;
+  vertical-align: middle; /* 垂直居中內容 */
+}
+
+/* 表頭：固定高度並優化顯示 */
+.reservation-table th {
+  background-color: #4299e1;
+  color: #ffffff;
+  font-weight: 600;
+  height: 50px; /* 固定表頭高度 */
+}
+
+/* 表格行懸停效果：增加交互性 */
+.table-row:hover {
+  background-color: #bee3f8;
+  transition: background-color 0.3s ease;
+}
+
+/* 學生 ID：微調位置 */
+.student-id {
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-style: italic;
+  display: block; /* 確保獨占一行 */
+}
+
+/* 響應式設計：適應小螢幕 */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem; /* 縮減內邊距 */
+    box-shadow: none; /* 小螢幕移除陰影 */
+  }
+
+  .title {
+    font-size: 1.5rem; /* 縮減標題 */
+    margin-bottom: 1rem;
+  }
+
+  .table-container {
+    padding: 0; /* 移除多餘內邊距 */
+  }
+
+  .reservation-table th,
+  .reservation-table td {
+    padding: 0.5rem; /* 縮減內邊距 */
+    font-size: 0.9rem; /* 縮減字型 */
+  }
+}
