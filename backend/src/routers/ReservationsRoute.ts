@@ -1,21 +1,23 @@
-import { Route } from "../abstract/Route"
+import { Route } from "../abstract/Route";
 import { ReservationsController } from "../controller/ReservationsController";
 
-export class ReservationsRoute extends Route{
-    
+export class ReservationsRoute extends Route {
     protected url: string;
-    protected Contorller = new ReservationsController();
+    protected Controller = new ReservationsController();  // Match name and access modifier
 
-    constructor(){
-        super()
-        this.url = '/Reservations/'
-        this.setRoutes()
+    constructor() {
+        super();
+        this.url = "/Reservations/";
+        this.setRoutes();
     }
 
     protected setRoutes(): void {
-        this.router.get(`${this.url}test`,(req, res)=>{
-            this.Contorller.test(req, res);
-        })
-    }
+        this.router.get(`${this.url}test`, (req, res) => {
+            this.Controller.test(req, res);
+        });
 
+        this.router.get(`${this.url}`, (req, res) => {
+            this.Controller.getStudentReservations(req, res);
+        });
+    }
 }
