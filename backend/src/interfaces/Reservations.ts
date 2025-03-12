@@ -7,12 +7,3 @@ export interface Reservation {
     create_time?: string;
   }
   
-  export interface ReservationAvailability {
-    timeslot_id: number;
-    start_time: string;
-    end_time: string;
-    seat_id: number;
-    row_label: string;
-    seat_number: number;
-    status: 'available' | 'booked';
-  }
