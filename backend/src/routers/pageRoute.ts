@@ -1,3 +1,4 @@
+import { Controller } from "../abstract/Controller";
 import { Route } from "../abstract/Route"
 import { PageController } from '../controller/pageController'
 

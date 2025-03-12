@@ -7,7 +7,7 @@ export interface Reservation {
     seat: {
         seat_id: number
         row_label: string
-        seat_number: number
+        seat_number: string
     },
     timeslot: {
         timeslot_id: number
